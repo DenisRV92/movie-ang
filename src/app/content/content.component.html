@@ -1,0 +1,8 @@
+<div class="content">
+  <div class="container">
+    <div *ngFor="let movie of movieService.stateMovie;let i=index">
+      <!--    {{movie.title}}-->
+      <img src="https://image.tmdb.org/t/p/original{{movie.poster_path}}" alt="">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.content {
+  //display: flex;
+  //justify-content: center;
+  //align-self: center;
+  //height: 100%;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    margin: 10% auto;
+//background-color: darkslategrey;
+//    padding: 5px;
+    div {
+padding: 7px;
+
+      img {
+        width: 120px;
+        height: 160px;
+
+      }
+      img:hover{
+        cursor: pointer;
+        transform:scale(1.2);
+        z-index: 1;
+      }
+    }
+  }
+}

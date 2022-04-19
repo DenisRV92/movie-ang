@@ -1,0 +1,7 @@
+<div class="nav">
+  <ul>
+    <li *ngFor="let nav of movieService.navList;let i=index" (click)="showNavId(nav.id)">
+      {{nav.name}}
+    </li>
+  </ul>
+</div>
