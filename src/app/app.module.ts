@@ -8,19 +8,27 @@ import {NavComponent} from './nav/nav.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ContentComponent } from './content/content.component';
 import {FormsModule} from "@angular/forms";
+import { LoaderComponent } from './loader/loader.component';
+import { ContentItemComponent } from './content-item/content-item.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavComponent,
-    ContentComponent
+    ContentComponent,
+    LoaderComponent,
+    ContentItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

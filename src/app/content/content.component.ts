@@ -19,9 +19,14 @@ export interface Movie {
 export class ContentComponent implements OnInit {
 
   constructor(public movieService: MovieService) {
+    // console.log(movieService.stateMovie)
   }
 
   ngOnInit(): void {
   }
 
+  showIdMovie(id:number){
+    // console.log(id)
+    this.movieService.showMovie(id);
+  }
 }

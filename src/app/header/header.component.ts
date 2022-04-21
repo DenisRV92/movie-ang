@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MovieService} from "../service/movie.service";
 
 @Component({
@@ -8,11 +8,14 @@ import {MovieService} from "../service/movie.service";
 })
 export class HeaderComponent implements OnInit {
   title: string = '';
-  constructor(public movieService: MovieService) { }
+
+  constructor(public movieService: MovieService) {
+  }
 
   ngOnInit(): void {
   }
-  guery(){
+
+  guery() {
     debugger
     this.movieService.seacrh(this.title);
   }
