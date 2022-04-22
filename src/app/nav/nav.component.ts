@@ -13,7 +13,7 @@ export interface Nav {
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-
+  // page: number = 1;
   constructor(public movieService: MovieService) {
   }
 
@@ -22,9 +22,9 @@ export class NavComponent implements OnInit {
       // .pipe(delay(2000))
       // .subscribe(() => {
       // });
-    debugger
+    // debugger
   }
   showNavId(id: number){
-    this.movieService.showNavId(id);
+        this.movieService.showNavId(id);
   }
 }

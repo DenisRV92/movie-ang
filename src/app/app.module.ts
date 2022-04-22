@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
+// import {NgxPaginationModule} from 'ngx-pagination';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
@@ -10,6 +10,7 @@ import { ContentComponent } from './content/content.component';
 import {FormsModule} from "@angular/forms";
 import { LoaderComponent } from './loader/loader.component';
 import { ContentItemComponent } from './content-item/content-item.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 
 @NgModule({
@@ -19,14 +20,15 @@ import { ContentItemComponent } from './content-item/content-item.component';
     NavComponent,
     ContentComponent,
     LoaderComponent,
-    ContentItemComponent
+    ContentItemComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-
+    // NgxPaginationModule
   ],
 
   providers: [],

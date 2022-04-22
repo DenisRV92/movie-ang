@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   }
 
   guery() {
-    debugger
+    console.log(this.title)
     this.movieService.seacrh(this.title);
   }
 }
