@@ -3,11 +3,18 @@ body{
   width: 100vw;
   height: 100vh;
   background-blend-mode: darken;
-  //body :after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,.5);  opacity: 0; }
-  //background-color: rgba(0, 0, 0, 0.5);
 
-  //background: rgba(0, 0, 0, 0.4);
-  //background-color: darkblue;
+  .container{
+    display: flex;
+
+    app-nav{
+      flex: 1 1 10%;
+    }
+
+    .content{
+      flex: 3 1 90%;
+    }
+  }
 }
 
 

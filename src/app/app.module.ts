@@ -11,6 +11,7 @@ import {FormsModule} from "@angular/forms";
 import { LoaderComponent } from './loader/loader.component';
 import { ContentItemComponent } from './content-item/content-item.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { NavBurgerComponent } from './nav-burger/nav-burger.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { PaginationComponent } from './pagination/pagination.component';
     ContentComponent,
     LoaderComponent,
     ContentItemComponent,
-    PaginationComponent
+    PaginationComponent,
+    NavBurgerComponent
   ],
   imports: [
     BrowserModule,

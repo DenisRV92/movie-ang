@@ -1,9 +1,14 @@
 <body>
-<app-header></app-header>
-<app-nav></app-nav>
-<!--<app-content></app-content>-->
-<!--<app-content-item></app-content-item>-->
-<router-outlet></router-outlet>
+<!--<app-header></app-header>-->
+<div class="container">
+  <app-nav></app-nav>
+  <!--<app-content></app-content>-->
+  <!--<app-content-item></app-content-item>-->
+  <div class="content">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+  </div>
+</div>
 </body>
 
 <!--<router-outlet></router-outlet>-->

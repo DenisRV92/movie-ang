@@ -25,11 +25,10 @@ export class PaginationComponent implements OnInit {
   showPages(event:any){
     // debuggerс
 // console.log()
+
     let url = this.router.url.split(';');
     // let query = url[1].split('=');
-    if(this.page===this.movieService.pagesCount){
-      console.log('qqqqqqq');
-    }
+
 // console.log(event.stopPropagation())
     console.log(this.page,this.movieService.pagesCount);
 // console.log()
@@ -37,13 +36,12 @@ export class PaginationComponent implements OnInit {
     this.pageChange.emit(this.page);
     if(url[0]==='/search'){
       let query = url[1].split('=');
-      this.movieService.seacrh(query[1],this.page)
+      this.movieService.search(query[1],this.page)
     }
-    // url[0]==='/search'? this.movieService.seacrh(query[1],this.page):this.movieService.showNavId(this.movieService.genresId,this.page);
-    // url[0]==='/search'? console.log('sss'):console.log('qqq');
-    // let query = url[1].split('=');
-    this.movieService.showNavId(this.movieService.genresId,this.page);
-    // console.log(+event.target.innerText);
+    else {
+      this.movieService.showNavId(this.movieService.genresId,this.page);
+    }
+
   }
 
   nextPage(){

@@ -1,8 +1,11 @@
 <div class="nav">
   <ul>
 <!--    <a href="">-->
+
       <li *ngFor="let nav of movieService.navList" (click)="showNavId(nav.id) ">
+<!--        <ng-content *ngIf="nav.name!=='Documentary'">-->
         <a [routerLink]="['navigation', nav.name]"> {{nav.name}}</a>
+<!--        </ng-content>-->
       </li>
 <!--    </a>-->
   </ul>

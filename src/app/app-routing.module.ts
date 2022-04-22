@@ -6,7 +6,7 @@ import {ContentComponent} from "./content/content.component";
 
 const routes: Routes = [
 
-  {path: 'movie/:id', component: ContentComponent},
+  {path: 'movie/:id', component: ContentItemComponent},
   {path: 'search', component: ContentComponent},
   {path: 'navigation/:name', component: ContentComponent},
 

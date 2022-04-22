@@ -28,9 +28,15 @@ export class MovieService {
       })
       .then((data) => {
         // setTimeout(()=>this.loading=false,3000)
-        this.navList = data.genres
-        this.loading = false
-        console.log(this.navList)
+        // data.genres.filter((v,i)=>i!=5);
+        // delete data.genres[5];
+        // let genres =data.genres;
+        // genres.filter((v:number,i:number)=>i!==5);
+        // this.navList = data.genres.filter(val => val);
+        this.navList = data.genres.filter((v:any,i:number)=>i!=5)
+;
+        // this.loading = false
+
       });
     // console.log(this.navList)
   }
@@ -52,8 +58,8 @@ export class MovieService {
       });
   }
 
-  seacrh(query: string,page:number=1) {
-    console.log(page)
+  search(query: string,page:number=1) {
+    // console.log(page)
     this.loading = true;
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=df38298bb94103d93e612462f8549e8b&language=en-US&include_adult=false&query=${query}&page=${page}`)
       .then((response) => {
