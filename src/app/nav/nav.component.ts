@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MovieService} from "../service/movie.service";
-import {delay} from "rxjs/operators";
+
 
 export interface Nav {
   id: number,
@@ -25,6 +25,8 @@ export class NavComponent implements OnInit {
     // debugger
   }
   showNavId(id: number){
+    this.movieService.pageContent=1;
         this.movieService.showNavId(id);
+        // this.page.page=1
   }
 }

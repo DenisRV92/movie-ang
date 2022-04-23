@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   }
 
   guery() {
-    // console.log(this.title)
+    this.movieService.pageContent = 1;
     this.movieService.search(this.title);
   }
 }

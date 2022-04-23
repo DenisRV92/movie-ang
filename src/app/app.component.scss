@@ -1,20 +1,35 @@
-body{
-  background: rgba(0, 0, 0, 0.8)  url('../img/752715.jpg');
-  width: 100vw;
-  height: 100vh;
+.app {
+  background: rgba(0, 0, 0, 0.8) url('../img/752715.jpg');
+  width: 100%;
+  min-height: 100vh;
   background-blend-mode: darken;
+  background-size: cover;
 
-  .container{
+  .container {
     display: flex;
 
-    app-nav{
+    app-nav {
       flex: 1 1 10%;
     }
 
-    .content{
+    .content {
       flex: 3 1 90%;
+    }
+
+    @media (max-width: 1280px) {
+      app-nav {
+        flex: 1 1 15%;
+      }
+      .content {
+        flex: 3 1 85%;
+      }
     }
   }
 }
 
+@media screen and (max-width: 950px) {
+  app-nav {
+    display: none;
+  }
 
+}

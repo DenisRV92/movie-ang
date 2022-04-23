@@ -1,17 +1,17 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-// import {NgxPaginationModule} from 'ngx-pagination';
+
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {NavComponent} from './nav/nav.component';
 import {HttpClientModule} from "@angular/common/http";
-import { ContentComponent } from './content/content.component';
+import {ContentComponent} from './content/content.component';
 import {FormsModule} from "@angular/forms";
-import { LoaderComponent } from './loader/loader.component';
-import { ContentItemComponent } from './content-item/content-item.component';
-import { PaginationComponent } from './pagination/pagination.component';
-import { NavBurgerComponent } from './nav-burger/nav-burger.component';
+import {LoaderComponent} from './loader/loader.component';
+import {ContentItemComponent} from './content-item/content-item.component';
+import {PaginationComponent} from './pagination/pagination.component';
+import {NavBurgerComponent} from './nav-burger/nav-burger.component';
 
 
 @NgModule({
@@ -30,7 +30,6 @@ import { NavBurgerComponent } from './nav-burger/nav-burger.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    // NgxPaginationModule
   ],
 
   providers: [],

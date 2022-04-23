@@ -2,6 +2,7 @@
   color: white;
   height: 100%;
   flex: 1 1 10%;
+
   ul {
     display: flex;
     flex-direction: column;
@@ -29,6 +30,27 @@
 
     li:hover {
       transform: scale(1.2);
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .nav{
+    color: white;
+    flex: 1 1 10%;
+    ul {
+      margin: 15% auto;
+      li{
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-height: 800px) {
+  .nav{
+   height: 0;
+    ul {
+      margin: 15% auto;
     }
   }
 }

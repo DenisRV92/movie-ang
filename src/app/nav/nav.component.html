@@ -1,14 +1,8 @@
 <div class="nav">
   <ul>
-<!--    <a href="">-->
-
-      <li *ngFor="let nav of movieService.navList" (click)="showNavId(nav.id) ">
-<!--        <ng-content *ngIf="nav.name!=='Documentary'">-->
+      <li *ngFor="let nav of movieService.navList" (click)="showNavId(nav.id)">
         <a [routerLink]="['navigation', nav.name]"> {{nav.name}}</a>
-<!--        </ng-content>-->
       </li>
-<!--    </a>-->
   </ul>
-<!--  <pagination-controls (pageChange)="page = $event"></pagination-controls>-->
 </div>
-<!--<pagination-controls (pageChange)="page = $event"></pagination-controls>-->
+

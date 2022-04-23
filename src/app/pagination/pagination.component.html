@@ -1,13 +1,17 @@
 <div class="pagination_container">
   <button *ngIf="page===1" [class.disabled]="page===1">prev</button>
   <button *ngIf="page!==1" (click)="prevPage()">prev</button>
-  <ng-container *ngIf="movieService.pagesCount!==1"><button  (click)="showPages($event)" [class.active]="page===pages"
-          *ngFor="let pages of pagination">{{pages}}</button>
+  <ng-container *ngIf="movieService.pagesCount!==1">
+    <button (click)="showPages($event)" [class.active]="page===pages"
+            *ngFor="let pages of pagination">{{pages}}</button>
   </ng-container>
-  <ng-container *ngIf="movieService.pagesCount===1"><button   [class.active]="page===pages"
-                                                             *ngFor="let pages of pagination">{{pages}}</button>
+  <ng-container *ngIf="movieService.pagesCount===1">
+    <button [class.active]="page===pages"
+            *ngFor="let pages of pagination">{{pages}}</button>
   </ng-container>
 
   <button *ngIf="page===movieService.pagesCount" [class.disabled]="page===movieService.pagesCount">next</button>
-  <button *ngIf="page!==movieService.pagesCount" [class.disabled]="page===movieService.pagesCount" (click)="nextPage()">next</button>
+  <button *ngIf="page!==movieService.pagesCount" [class.disabled]="page===movieService.pagesCount" (click)="nextPage()">
+    next
+  </button>
 </div>

@@ -1,0 +1,92 @@
+.content {
+  display: flex;
+  width: 70%;
+  margin: 5% auto;
+  padding: 10px;
+
+  img {
+    width: 400px;
+    height: 550px;
+  }
+
+  .description {
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    opacity: 0.7;
+    color: black;
+    word-wrap: break-word;
+
+    span {
+      color: #f90;
+    }
+
+    .description__exit {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #f90;
+      color: #fff;
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    img {
+      width: 300px;
+      height: 400px;
+    }
+    .description {
+      .description__exit {
+        font-size: 1.5em;
+      }
+    }
+    @media (max-width: 991px) {
+      img {
+        width: 200px;
+        height: 350px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    img {
+      width: 100px;
+      height: 150px;
+
+    }
+    .description {
+      font-size: 6px;
+
+      .description__exit {
+        width: 15px;
+        height: 15px;
+        font-size: 1.5em;
+      }
+    }
+
+  }
+  @media (max-height: 655px) {
+    .description {
+      padding: 10px;
+
+      .description__exit {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  @media (max-width: 300px) {
+    .description {
+      .description__exit {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}

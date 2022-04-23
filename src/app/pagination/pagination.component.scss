@@ -2,9 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: rgba(216, 73, 73, 0.2); */
   width: 100%;
-  font-weight: 500;
   font-size: 15px;
   margin-top: 50px;
 }
@@ -14,7 +12,6 @@
   justify-content: center;
   align-items: center;
   color: black;
-  /* padding: 8px 14px; */
   height: 40px;
   width: 40px;
   text-decoration: none;
@@ -26,7 +23,7 @@
 }
 
 .pagination_container button.active {
-  background-color: dodgerblue;
+  background-color: #f90;;
   color: white;
   font-size: large;
   border: 1px solid #7cbddb;
@@ -36,4 +33,20 @@
   opacity: 0.2;
   background-color: lightgray;
 }
-.pagination_container button:hover:not(.active) {background-color: rgb(238, 238, 238);}
+
+.pagination_container button:hover:not(.active) {
+  background-color: rgb(238, 238, 238);
+}
+
+@media (max-width: 767px) {
+  .pagination_container button {
+    width: 25px;
+  }
+  @media (max-width: 318px) {
+    .pagination_container button {
+      height: 20px;
+      width: 20px;
+      font-size: 10px;
+    }
+  }
+}

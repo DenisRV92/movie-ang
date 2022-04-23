@@ -1,19 +1,18 @@
 <div class="content">
   <div *ngIf="!movieService.loading">
-<!--    <div class="pagination">-->
-<!--&lt;!&ndash;      <pagination-controls class="my-pagination"  (pageChange)="page = $event"></pagination-controls>&ndash;&gt;-->
-<!--    </div>-->
-    <app-pagination [(page)]="pageContent"></app-pagination>
+    <app-pagination></app-pagination>
     <div class="container">
-      <!--      <pagination-controls (pageChange)="page = $event"></pagination-controls>-->
       <div
         *ngFor="let movie of movieService.stateMovie">
-        <!--    {{movie.title}}-->
         <a [routerLink]="['/movie',movie.id]">
+          <ng-container *ngIf="movie.poster_path">
           <img src="https://image.tmdb.org/t/p/original{{movie.poster_path}}" (click)="showIdMovie(movie.id)" alt="">
+          </ng-container>
+          <ng-container *ngIf="!movie.poster_path">
+            <img src="https://xn--90aha1bhcc.xn--p1ai/img/placeholder.png" alt="нет фото">
+          </ng-container>
         </a>
       </div>
-      <!--      <pagination-controls (pageChange)="page = $event"></pagination-controls>-->
     </div>
   </div>
   <div *ngIf="movieService.loading">
