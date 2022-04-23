@@ -1,8 +1,0 @@
-<div class="nav">
-  <ul>
-      <li *ngFor="let nav of movieService.navList" (click)="showNavId(nav.id)">
-        <a [routerLink]="['navigation', nav.name]"> {{nav.name}}</a>
-      </li>
-  </ul>
-</div>
-
